@@ -19,6 +19,6 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: username/myapp:v1
+        image: mohammedsulaimana9/myapp:004b73c2ab0e7a77b359878988bf3033813bfb92
         ports:
         - containerPort: 5000
