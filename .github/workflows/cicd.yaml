@@ -29,21 +29,21 @@ jobs:
       run: |
         docker push mohammedsulaimana9/myapp:${{ github.sha }}
 
-    # - name: Clone GitOps Repo
-    #   run: |
-    #     git clone https://${{ secrets.GH_TOKEN }}@github.com/mohammedsulaimana9-git/GitOps-project-.git
+    - name: Clone GitOps Repo
+      run: |
+        git clone https://${{ secrets.GH_TOKEN }}@github.com/mohammedsulaimana9-git/GitOps-project-.git
 
-    # - name: Update Image Tag
-    #   run: |
-    #     cd gitops-repo
+    - name: Update Image Tag
+      run: |
+        cd gitops-repo
 
-    #     sed -i 's|image:.*|image: mohammedsulaimana9/myapp:${{ github.sha }}|' deployment.yaml
+        sed -i 's|image:.*|image: mohammedsulaimana9/myapp:${{ github.sha }}|' deployment.yaml
 
-    #     git config user.email "github-actions@github.com"
-    #     git config user.name "github-actions-Runner"
+        git config user.email "github-actions@github.com"
+        git config user.name "github-actions-Runner"
 
-    #     git add .
-    #     git commit -m "Updated image tag"
+        git add .
+        git commit -m "Updated image tag"
 
-        # git push
+        git push
 
