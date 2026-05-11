@@ -23,11 +23,11 @@ jobs:
 
     - name: Build Docker Image
       run: |
-        docker build -t username/myapp:${{ github.sha }} .
+        docker build -t mohammedsulaimana9/myapp:${{ github.sha }} .
 
     - name: Push Docker Image
       run: |
-        docker push username/myapp:${{ github.sha }}
+        docker push mohammedsulaimana9/myapp:${{ github.sha }}
 
     # - name: Clone GitOps Repo
     #   run: |
@@ -37,7 +37,7 @@ jobs:
     #   run: |
     #     cd gitops-repo
 
-    #     sed -i 's|image:.*|image: username/myapp:${{ github.sha }}|' deployment.yaml
+    #     sed -i 's|image:.*|image: mohammedsulaimana9/myapp:${{ github.sha }}|' deployment.yaml
 
     #     git config user.email "github-actions@github.com"
     #     git config user.name "github-actions-Runner"
